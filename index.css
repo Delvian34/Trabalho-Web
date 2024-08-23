@@ -1,0 +1,98 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evita rolagem */
+}
+.caixa-sombreada {
+    background-color: #f5f5f5;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0 1px 30px rgba(148, 124, 6, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+p{
+    text-align: left;
+    font-size: 17px;
+    font-family: 'Arial', sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 34vh; /* Altura total da viewport */
+    width: 100vw; /* Largura total da viewport */
+    position: relative; /* Necessário para o posicionamento absoluto do texto */
+}
+
+.quadrado1, .quadrado2, .quadrado3 {
+    width: 100vw; /* Largura total da viewport */
+    position: absolute;
+    z-index: 1;
+}
+
+.quadrado1 {
+    height: 10vw; /* Altura dos quadrados */
+    top: 0; /* Posiciona no topo */
+    background: linear-gradient(110deg, #d3d482, #7f807d, #d6d6d1, #777675);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.quadrado2 {
+    height: 20vh; /* Altura dos quadrados */
+    bottom: 0; /* Posiciona na parte inferior */
+    background: linear-gradient(110deg, #d3d482, #7f807d, #d6d6d1, #777675);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.quadrado3 {
+    height: 6vh; /* Altura dos quadrados */
+    top: 135px; /* Posição relativa */
+    background: linear-gradient(135deg, #3d3d3d, #626362, #303030, #969696);
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.link-quadrado {
+    display: flex;
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    width: 300px; /* Largura dos quadrados */
+    height: 30px; /* Altura dos quadrados */
+    color: hwb(0 100% 0%); /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte do texto */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold;
+    position: relative; /* Necessário para o z-index funcionar */
+    z-index: 2; /* Valor maior que o das faixas */
+}

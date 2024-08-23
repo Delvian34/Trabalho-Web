@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e8e9d7;
+    text-align: center;
+    
+}
+header {
+    background: #a5a17c;
+    color: #000000;
+    padding-top: 70px;
+    min-height: 70px;
+    border-bottom: #6c6d1e 9px solid;
+    
+}
+.video, .image {
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
